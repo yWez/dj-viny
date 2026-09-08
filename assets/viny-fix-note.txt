@@ -1,0 +1,1 @@
+Replacing external Drive image URLs with local repository assets for Safari/mobile compatibility.
