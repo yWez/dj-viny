@@ -4,172 +4,240 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#050505" />
-  <meta name="description" content="Viny DJ — Open Format em João Pessoa. House, brasilidades, Pop e Funk para marcas, celebrações, shows e festivais." />
+  <meta name="description" content="Viny DJ — Open Format em João Pessoa. House, brasilidades, Pop e Funk com leitura de pista para marcas, celebrações, shows e festivais." />
+  <meta property="og:title" content="Viny DJ | Open Format | João Pessoa" />
+  <meta property="og:description" content="Leitura de pista, repertório e presença para transformar cada evento em uma experiência memorável." />
+  <meta property="og:type" content="website" />
   <title>Viny DJ | Open Format | João Pessoa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preload" as="image" href="assets/viny-sounds.jpg" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar" id="topbar">
     <div class="shell nav">
       <a class="wordmark" href="#top" aria-label="Viny, início">V1NY</a>
-      <nav class="nav-links" aria-label="Navegação principal">
-        <a href="#artista">Artista</a>
-        <a href="#formatos">Eventos</a>
-        <a href="#projetos">Projetos</a>
-        <a class="booking-pill" href="#booking">Booking</a>
-      </nav>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
-    </div>
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#artista">O artista</a>
-      <a href="#formatos">Formatos</a>
-      <a href="#identidade">Identidade</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#carreira">Carreira</a>
-      <a href="#booking">Booking</a>
+      <a class="header-cta" href="#booking">Consultar disponibilidade</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <img class="hero-photo" src="assets/viny-sounds.jpg" alt="Viny em performance" loading="eager" />
-      <div class="hero-shade"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/viny-sounds.jpg" alt="Viny em performance diante da pista" fetchpriority="high" />
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="shell hero-inner">
-        <div class="hero-kicker"><span></span> DJ · OPEN FORMAT · JOÃO PESSOA</div>
-        <h1><span>SOM QUE</span><span>LÊ</span><span class="outline">A PISTA.</span></h1>
-        <p>House, brasilidades, Pop e Funk em sets construídos para conectar pessoas e transformar cada evento em uma experiência memorável.</p>
+        <div class="hero-kicker">DJ · OPEN FORMAT · JOÃO PESSOA</div>
+        <h1 id="hero-title">
+          <span>SOM QUE</span>
+          <span>LÊ</span>
+          <span class="outline">A PISTA.</span>
+        </h1>
+        <p class="hero-value">House, brasilidades, Pop e Funk com leitura de público para manter a energia do evento no lugar certo, do início ao fim.</p>
         <div class="hero-actions">
-          <a class="cta-lime" href="#artista">Descobrir o artista ↓</a>
-          <a class="cta-outline" href="#booking">Consultar data</a>
+          <a class="btn-primary" href="#booking">Consultar disponibilidade <span>↗</span></a>
+          <a class="text-action light" href="#prova">Ver por que Viny <span>↓</span></a>
         </div>
-        <div class="hero-meta">Festivais · Marcas · Casamentos · Celebrações · Shows</div>
-      </div>
-    </section>
-
-    <section class="brand-strip">
-      <div class="shell">
-        <div class="strip-label">Experiência em eventos de</div>
-        <div class="strip-track"><span>SMART FIT</span><span>SIR INVESTIMENTOS / XP</span><span>MCDONALD'S</span><span>COCA-COLA</span><span>TAUÁ RESORT</span></div>
-      </div>
-    </section>
-
-    <section class="section black" id="artista">
-      <div class="shell artist-copy">
-        <div class="section-index">01 / O ARTISTA</div>
-        <div class="section-kicker">VERSATILIDADE SEM PERDER IDENTIDADE.</div>
-        <h2>DA ELEGÂNCIA<br><span>À EXPLOSÃO.</span></h2>
-        <p>Viny iniciou sua trajetória nas pistas com sets de House e construiu, ao longo dos anos, uma assinatura que atravessa brasilidades, Pop e Funk com naturalidade.</p>
-        <a class="text-link" href="#momento">Ver momentos ↓</a>
-      </div>
-      <div class="shell moment" id="momento">
-        <div class="moment-photo">
-          <img src="assets/viny-atmosphere.jpg" alt="Viny diante do público" loading="lazy" />
-          <div class="moment-caption"><small>LEITURA DE PISTA</small><strong>O REPERTÓRIO MUDA. A CONEXÃO PERMANECE.</strong></div>
+        <div class="hero-trust">
+          <span>Experiência em eventos de</span>
+          <strong>SMART FIT</strong><strong>GRUPO XP</strong><strong>MCDONALD'S</strong><strong>COCA-COLA</strong><strong>TAUÁ RESORT</strong>
         </div>
       </div>
     </section>
 
-    <section class="section cream" id="formatos">
-      <div class="shell">
-        <div class="section-index dark-index">02 / FORMATOS</div>
-        <h2 class="cream-title">CADA EVENTO<br>PEDE UMA PISTA.</h2>
-        <p class="cream-intro">Do ambiente corporativo à madrugada de um festival, Viny adapta a condução sem diluir sua identidade.</p>
-        <div class="format-list">
-          <article><span class="num">01</span><div><h3>MARCAS &<br>CORPORATIVO</h3><p>Repertório versátil, presença profissional e uma experiência alinhada ao perfil de cada marca.</p></div></article>
-          <article><span class="num">02</span><div><h3>CASAMENTOS & 15 ANOS</h3><p>Leitura de público e construção de energia para fazer cada momento da celebração acontecer no tempo certo.</p></div></article>
-          <article><span class="num">03</span><div><h3>SHOWS & FESTIVAIS</h3><p>Sets de alto impacto, conexão rápida e repertório pensado para pistas grandes e públicos diversos.</p></div></article>
-        </div>
+    <section class="proof-strip" aria-label="Marcas atendidas">
+      <div class="shell proof-row">
+        <span class="proof-label">MARCAS QUE JÁ TIVERAM VINY EM SEUS EVENTOS</span>
+        <div class="proof-logos"><b>SMART FIT</b><b>SIR / XP</b><b>MCDONALD'S</b><b>COCA-COLA</b><b>TAUÁ RESORT</b></div>
       </div>
     </section>
 
-    <section class="section black" id="identidade">
+    <section class="section black why" id="prova">
       <div class="shell">
-        <div class="section-index">03 / IDENTIDADE MUSICAL</div>
-        <h2 class="identity-title">SEM FRONTEIRAS.<br><span>COM DIREÇÃO.</span></h2>
-        <p class="identity-intro">A versatilidade não está em tocar de tudo. Está em saber o que tocar, quando tocar e como conduzir a pista até o próximo momento.</p>
-        <div class="genre-rows">
-          <article><span>01</span><div><h3>HOUSE</h3><p>Groove, construção e atmosfera: a base da trajetória de Viny.</p></div></article>
-          <article><span>02</span><div><h3>BRASILIDADES</h3><p>Referências brasileiras e remixes que ganham nova vida na pista.</p></div></article>
-          <article><span>03</span><div><h3>POP</h3><p>Hits reconhecíveis conectados por técnica, narrativa e timing.</p></div></article>
-          <article><span>04</span><div><h3>FUNK</h3><p>Pressão, energia e leitura para mudar o nível da pista na hora certa.</p></div></article>
+        <div class="section-index">01 / POR QUE VINY</div>
+        <div class="why-grid">
+          <div class="why-head">
+            <h2>VOCÊ NÃO CONTRATA<br>UM SET.<br><span>CONTRATA O MOMENTO.</span></h2>
+          </div>
+          <div class="why-copy">
+            <p>O repertório importa. Mas o que faz a pista funcionar é saber quando acelerar, quando segurar e como conectar públicos diferentes sem perder identidade.</p>
+            <a class="text-action" href="#formatos">Encontrar meu formato <span>↓</span></a>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section projects" id="projetos">
-      <div class="shell">
-        <div class="section-index project-index">04 / PROJETOS AUTORAIS</div>
-        <h2 class="projects-title">MAIS QUE SETS.<br>CENAS PRÓPRIAS.</h2>
-        <div class="project-stack">
-          <article class="project-card sounds-card">
-            <div class="orb one"></div><div class="orb two"></div>
-            <div class="project-top">HOUSE · BRASILIDADES · SUNSET</div>
-            <div class="project-label">PROJETO CRIADO POR VINY E MONTENEGRO</div>
-            <h3>SOUNDS<br>OF<br>BRAZIL</h3>
-            <a href="https://soundsofbrazil.lovable.app" target="_blank" rel="noopener">Conhecer o projeto ↗</a>
+        <div class="benefit-grid">
+          <article>
+            <span>01</span>
+            <h3>LEITURA DE PISTA</h3>
+            <p>O set responde ao que está acontecendo na frente do DJ, não a uma playlist engessada.</p>
           </article>
-          <article class="project-card funk-card">
-            <div class="project-top">FUNK · REMIXES · CULTURA DE PISTA</div>
-            <div class="project-label">PROJETO AUTORAL</div>
-            <h3>FUNK<br>MODE</h3>
-            <p>Energia brasileira em primeiro plano. Um recorte de pista intenso, noturno e com identidade própria.</p>
-            <div class="funk-thumbs">
-              <img src="assets/funkmode-stage.jpg" alt="Pista da FunkMode" loading="lazy" />
-              <img src="assets/funkmode-bear.jpg" alt="Personagem da FunkMode" loading="lazy" />
+          <article>
+            <span>02</span>
+            <h3>VERSATILIDADE COM IDENTIDADE</h3>
+            <p>House, brasilidades, Pop e Funk entram com direção, timing e coerência.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>EXPERIÊNCIA EM FORMATOS DIFERENTES</h3>
+            <p>De marcas e celebrações a grandes pistas: a condução muda porque o objetivo do evento muda.</p>
+          </article>
+        </div>
+
+        <figure class="statement-photo">
+          <img src="assets/viny-atmosphere.jpg" alt="Viny conduzindo uma grande pista" loading="lazy" />
+          <figcaption><small>LEITURA DE PISTA</small><strong>O REPERTÓRIO MUDA.<br>A CONEXÃO PERMANECE.</strong></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section cream formats" id="formatos">
+      <div class="shell">
+        <div class="section-index dark-index">02 / QUAL É O SEU EVENTO?</div>
+        <div class="format-head">
+          <h2>CADA EVENTO<br>PEDE UMA<br><span>LEITURA.</span></h2>
+          <p>Escolha o formato que mais se aproxima do seu evento. O booking já abre com essa informação preenchida.</p>
+        </div>
+
+        <div class="format-list">
+          <article>
+            <span class="num">01</span>
+            <div class="format-body">
+              <h3>MARCAS & CORPORATIVO</h3>
+              <p>Para ativações, confraternizações e experiências de marca que precisam de presença profissional sem virar uma festa genérica.</p>
+              <a href="#booking" class="format-cta" data-event="Corporativo / Marca">Esse é meu evento <span>↗</span></a>
+            </div>
+          </article>
+          <article>
+            <span class="num">02</span>
+            <div class="format-body">
+              <h3>CASAMENTOS & 15 ANOS</h3>
+              <p>Para celebrações em que públicos diferentes precisam se encontrar na mesma pista e a energia precisa crescer no tempo certo.</p>
+              <a href="#booking" class="format-cta" data-event="Casamento / 15 anos">Esse é meu evento <span>↗</span></a>
+            </div>
+          </article>
+          <article>
+            <span class="num">03</span>
+            <div class="format-body">
+              <h3>SHOWS & FESTIVAIS</h3>
+              <p>Para pistas maiores, com resposta rápida de público, presença de palco e repertório construído para alto impacto.</p>
+              <a href="#booking" class="format-cta" data-event="Show / Festival">Esse é meu evento <span>↗</span></a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section black" id="carreira">
-      <div class="shell">
-        <div class="section-index">05 / PALCOS & CARREIRA</div>
-        <h2 class="career-title">PRESENÇA QUE<br><span>GANHA ESPAÇO.</span></h2>
-        <p class="career-intro">Viny já passou por festivais e eventos de alto padrão em João Pessoa, como Sunfest e Bossa, além de experiências para algumas das maiores marcas do país.</p>
-        <div class="shared-label">ARTISTAS COM QUEM JÁ DIVIDIU PALCO</div>
-        <div class="artist-list">
-          <div><span>01</span><strong>KADU MARTINS</strong></div>
-          <div><span>02</span><strong>NUZIO MEDEIROS</strong></div>
-          <div><span>03</span><strong>KAKA E PEDRINHO</strong></div>
-          <div><span>04</span><strong>DESEJO DE MENINA</strong></div>
-          <div><span>05</span><strong>KELLY SILVA</strong></div>
-          <div><span>06</span><strong>MOJJO</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="shell gallery-grid">
-        <figure class="gallery-main"><img src="assets/viny-portrait.jpg" alt="Viny em evento" loading="lazy" /><figcaption>EVENTOS & CELEBRAÇÕES</figcaption></figure>
-        <figure><img src="assets/viny-atmosphere.jpg" alt="Grande público em apresentação" loading="lazy" /><figcaption>GRANDES PISTAS</figcaption></figure>
-        <figure><img src="assets/viny-hero.jpg" alt="Retrato do DJ Viny" loading="lazy" /><figcaption>MARCA & PRESENÇA</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="section cream booking" id="booking">
-      <div class="shell booking-grid">
-        <div>
-          <div class="section-index dark-index">06 / BOOKING</div>
-          <h2 class="booking-title">SUA PISTA.<br><span>NO TEMPO<br>CERTO.</span></h2>
-          <p>Para consultar disponibilidade, envie a data, a cidade e o formato do seu evento para a equipe do Viny.</p>
-          <div class="commercial-contact">
-            <div>CONTATO COMERCIAL</div>
-            <a href="https://wa.me/5583998008841?text=Olá!%20Quero%20consultar%20a%20disponibilidade%20do%20Viny." target="_blank" rel="noopener">WhatsApp · Falar com a equipe ↗</a>
-            <a href="https://instagram.com/vinydj" target="_blank" rel="noopener">Instagram · @vinydj ↗</a>
+    <section class="section black identity" id="identidade">
+      <div class="shell identity-grid">
+        <div class="identity-copy">
+          <div class="section-index">03 / IDENTIDADE MUSICAL</div>
+          <h2>SEM FRONTEIRAS.<br><span>COM DIREÇÃO.</span></h2>
+          <p>A versatilidade não está em tocar de tudo. Está em saber o que tocar, quando tocar e qual caminho mantém a pista conectada.</p>
+          <div class="genres" aria-label="Estilos musicais">
+            <span>HOUSE</span><span>BRASILIDADES</span><span>POP</span><span>FUNK</span>
           </div>
         </div>
+        <figure class="identity-photo">
+          <img src="assets/viny-hero.jpg" alt="Viny tocando com fones" loading="lazy" />
+          <figcaption>OPEN FORMAT · JP · BR</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section projects" id="projetos">
+      <div class="shell">
+        <div class="section-index project-index">04 / PROJETOS AUTORAIS</div>
+        <div class="projects-head">
+          <h2>ARTISTA NÃO É<br>SÓ QUEM TOCA.<br><span>É QUEM CRIA CENA.</span></h2>
+          <p>Os projetos autorais mostram o lado de Viny que vai além do booking: conceito, curadoria e construção de experiências próprias.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card sounds-card">
+            <div class="project-top">HOUSE · BRASILIDADES · SUNSET</div>
+            <div class="project-small">VINY + MONTENEGRO</div>
+            <h3>SOUNDS<br>OF<br>BRAZIL</h3>
+            <div class="project-bottom">
+              <p>Uma experiência que cruza House e brasilidades em uma identidade própria de pista.</p>
+              <a href="https://soundsofbrazil.lovable.app" target="_blank" rel="noopener">Conhecer o projeto <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card funk-card">
+            <div class="project-top">FUNK · REMIXES · CULTURA DE PISTA</div>
+            <div class="project-small">PROJETO AUTORAL</div>
+            <h3>FUNK<br>MODE</h3>
+            <div class="project-bottom">
+              <p>Funk em primeiro plano, com recorte noturno, intensidade e linguagem própria.</p>
+              <a href="#booking" class="format-cta" data-event="FunkMode / Projeto autoral">Levar para meu evento <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section black credibility" id="carreira">
+      <div class="shell">
+        <div class="section-index">05 / PROVA DE PALCO</div>
+        <div class="credibility-head">
+          <h2>EXPERIÊNCIA QUE<br><span>NÃO PRECISA SER INVENTADA.</span></h2>
+          <p>Marcas, festivais e artistas ajudam a mostrar o contexto em que Viny já entregou sua performance.</p>
+        </div>
+
+        <div class="credibility-grid">
+          <div class="cred-block">
+            <small>EVENTOS PARA</small>
+            <strong>SMART FIT</strong>
+            <strong>SIR INVESTIMENTOS / XP</strong>
+            <strong>MCDONALD'S</strong>
+            <strong>COCA-COLA</strong>
+            <strong>TAUÁ RESORT</strong>
+          </div>
+          <div class="cred-block">
+            <small>JÁ DIVIDIU PALCO COM</small>
+            <strong>KADU MARTINS</strong>
+            <strong>NUZIO MEDEIROS</strong>
+            <strong>KAKA E PEDRINHO</strong>
+            <strong>DESEJO DE MENINA</strong>
+            <strong>KELLY SILVA</strong>
+            <strong>MOJJO</strong>
+          </div>
+        </div>
+
+        <div class="photo-pair">
+          <figure><img src="assets/viny-portrait.jpg" alt="Viny em evento e celebração" loading="lazy" /><figcaption>EVENTOS & CELEBRAÇÕES</figcaption></figure>
+          <figure><img src="assets/viny-atmosphere.jpg" alt="Viny em grande pista" loading="lazy" /><figcaption>GRANDES PISTAS</figcaption></figure>
+        </div>
+
+        <div class="mid-cta">
+          <p>Se o seu evento precisa de pista viva, repertório flexível e alguém que saiba conduzir o momento, o próximo passo é simples.</p>
+          <a class="btn-primary dark-button" href="#booking">Consultar disponibilidade <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="booking">
+      <div class="shell booking-grid">
+        <div class="booking-copy">
+          <div class="section-index dark-index">06 / BOOKING</div>
+          <h2>SUA DATA.<br>SUA PISTA.<br><span>VINY.</span></h2>
+          <p>Preencha o essencial. Ao enviar, o WhatsApp abre com a mensagem pronta para a equipe confirmar disponibilidade e próximos passos.</p>
+          <div class="booking-note">
+            <strong>Prefere falar direto?</strong>
+            <a href="https://wa.me/5583998008841?text=Olá!%20Quero%20consultar%20a%20disponibilidade%20do%20Viny." target="_blank" rel="noopener">Abrir WhatsApp ↗</a>
+          </div>
+        </div>
+
         <form class="booking-form" id="bookingForm">
-          <label>Nome<input name="name" required /></label>
-          <label>WhatsApp<input name="phone" required /></label>
-          <label>Data<input name="date" type="date" /></label>
-          <label>Cidade<input name="city" required /></label>
-          <label class="full">Formato<select name="type" required><option value="">Selecione</option><option>Corporativo / Marca</option><option>Casamento</option><option>15 anos</option><option>Show / Festival</option><option>Festa privada</option><option>Outro</option></select></label>
-          <label class="full">Detalhes<textarea name="message" placeholder="Conte um pouco sobre o evento."></textarea></label>
-          <button type="submit">Consultar disponibilidade ↗</button>
+          <div class="field full"><label for="name">Seu nome</label><input id="name" name="name" autocomplete="name" required placeholder="Como podemos te chamar?" /></div>
+          <div class="field full"><label for="type">Tipo de evento</label><select id="type" name="type" required><option value="">Selecione</option><option>Corporativo / Marca</option><option>Casamento</option><option>15 anos</option><option>Show / Festival</option><option>Festa privada</option><option>FunkMode / Projeto autoral</option><option>Outro</option></select></div>
+          <div class="field"><label for="date">Data</label><input id="date" name="date" type="date" /></div>
+          <div class="field"><label for="city">Cidade</label><input id="city" name="city" autocomplete="address-level2" required placeholder="Cidade do evento" /></div>
+          <div class="field full"><label for="message">Algo importante? <span>Opcional</span></label><textarea id="message" name="message" placeholder="Ex.: público estimado, local, horário..."></textarea></div>
+          <button type="submit">Ver disponibilidade no WhatsApp <span>↗</span></button>
+          <p class="form-note">Você não envia dados para um servidor. O formulário apenas organiza as informações e abre uma conversa no WhatsApp.</p>
         </form>
       </div>
     </section>
@@ -177,11 +245,12 @@
 
   <footer>
     <div class="shell footer-inner">
-      <div class="footer-logo">V1NY</div>
+      <a class="footer-logo" href="#top">V1NY</a>
       <div>DJ · OPEN FORMAT · JOÃO PESSOA, BRASIL</div>
-      <a href="#top">VOLTAR AO TOPO ↑</a>
+      <a href="https://instagram.com/vinydj" target="_blank" rel="noopener">INSTAGRAM · @VINYDJ ↗</a>
     </div>
   </footer>
+
   <script src="script.js" defer></script>
 </body>
 </html>
