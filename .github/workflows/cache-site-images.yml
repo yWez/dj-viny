@@ -1,0 +1,71 @@
+name: Cache site images
+
+on:
+  push:
+    paths:
+      - '.github/workflows/cache-site-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cache-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Download shared Drive images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://drive.google.com/thumbnail?id=137j4OazWxkfxt0ldsEqaa0SI7rhL8tA5&sz=w1600' -o assets/viny-hero.jpg
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://drive.google.com/thumbnail?id=1ZG6QSeRvmyFpg4uz5boKaVSBcZVwMgEf&sz=w1600' -o assets/viny-portrait.jpg
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://drive.google.com/thumbnail?id=1XcBzzg8IeeU7tbzx7WCNyIoyADbN6Du_&sz=w1600' -o assets/viny-sounds.jpg
+          curl -L --fail --retry 3 -A 'Mozilla/5.0' 'https://drive.google.com/thumbnail?id=1uhOFqfYlA42ilq0aE8fPuQRXwbAQr6eY&sz=w1600' -o assets/viny-atmosphere.jpg
+
+          for f in assets/viny-hero.jpg assets/viny-portrait.jpg assets/viny-sounds.jpg assets/viny-atmosphere.jpg; do
+            mime="$(file -b --mime-type "$f")"
+            echo "$f -> $mime"
+            [[ "$mime" == image/* ]] || { echo "Invalid image response for $f"; exit 1; }
+          done
+
+      - name: Replace Drive hotlinks with local assets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              'https://drive.google.com/uc?export=view&id=137j4OazWxkfxt0ldsEqaa0SI7rhL8tA5': 'assets/viny-hero.jpg',
+              'https://drive.google.com/uc?export=view&id=1ZG6QSeRvmyFpg4uz5boKaVSBcZVwMgEf': 'assets/viny-portrait.jpg',
+              'https://drive.google.com/uc?export=view&id=1XcBzzg8IeeU7tbzx7WCNyIoyADbN6Du_': 'assets/viny-sounds.jpg',
+              'https://drive.google.com/uc?export=view&id=1uhOFqfYlA42ilq0aE8fPuQRXwbAQr6eY': 'assets/viny-atmosphere.jpg',
+          }
+
+          for filename in ('index.html', 'styles.css'):
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+              path.write_text(text, encoding='utf-8')
+
+          Path('assets/viny-portrait-site.webp').unlink(missing_ok=True)
+          Path('assets/viny-fix-note.txt').unlink(missing_ok=True)
+          PY
+
+      - name: Commit cached images
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html styles.css assets/
+          git add -u
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'fix: hospeda fotos localmente para Safari e mobile'
+          git push
