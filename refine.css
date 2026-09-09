@@ -1,0 +1,55 @@
+/* Refinamento editorial - mantém a linguagem original, melhora leitura e composição */
+.wordmark,.footer-logo{display:block;width:104px;height:28px;background:url('logo.svg') center/contain no-repeat;font-size:0;letter-spacing:0;transform:none;color:transparent;overflow:hidden}
+.footer-logo{width:132px;height:34px}
+
+.hero h1{line-height:.86;letter-spacing:-.012em;max-width:900px}
+.hero h1 span{display:block;margin:0 0 .045em}
+.hero h1 span:last-child{margin-bottom:0}
+.hero h1 .outline{-webkit-text-stroke:1.35px var(--cream)}
+
+.why h2{line-height:.9;letter-spacing:-.012em;max-width:900px}
+.why h2 br{display:block;content:'';margin:.06em 0}
+.formats h2{line-height:.88;letter-spacing:-.01em}
+.identity h2{line-height:.9;letter-spacing:-.01em}
+.projects h2{line-height:.9;letter-spacing:-.01em}
+.credibility h2{line-height:.9;letter-spacing:-.01em}
+.booking h2{line-height:.9;letter-spacing:-.01em}
+.project-card h3{line-height:.86;letter-spacing:0}
+
+.hero-photo{object-position:center 34%}
+.identity-photo img{filter:none;object-position:center 20%}
+.statement-photo img{object-position:center 52%}
+.photo-pair figure:first-child img{object-position:center 17%}
+
+.why-grid,.format-head,.projects-head,.credibility-head{align-items:start}
+.why-copy,.format-head>p,.projects-head>p,.credibility-head>p{padding-top:10px}
+
+@media(max-width:900px){
+  .wordmark{width:90px;height:24px}.footer-logo{width:118px;height:30px}
+  .why-grid,.format-head,.projects-head,.credibility-head{gap:34px}
+  .why h2,.formats h2,.identity h2,.projects h2,.credibility h2,.booking h2{max-width:100%}
+}
+
+@media(max-width:640px){
+  .topbar{height:70px}
+  .wordmark{width:82px;height:22px}
+  .header-cta{min-height:38px;padding:0 13px;font-size:9px;letter-spacing:.11em}
+  .hero-inner{padding-top:118px;padding-bottom:44px}
+  .hero h1{font-size:clamp(70px,20vw,96px);line-height:.91;letter-spacing:-.008em;margin-top:22px}
+  .hero h1 span{margin-bottom:.05em}
+  .hero h1 .outline{-webkit-text-stroke:1px var(--cream)}
+  .hero-value{margin-top:26px;font-size:17px;line-height:1.55}
+  .hero-trust{gap:10px 16px}
+  .why h2{font-size:clamp(62px,18vw,86px);line-height:.94;letter-spacing:0}
+  .formats h2{font-size:clamp(62px,18vw,86px);line-height:.93;letter-spacing:0}
+  .identity h2{font-size:clamp(58px,17vw,82px);line-height:.94;letter-spacing:0}
+  .projects h2{font-size:clamp(60px,17vw,84px);line-height:.94;letter-spacing:0}
+  .credibility h2{font-size:clamp(58px,16.5vw,82px);line-height:.94;letter-spacing:0}
+  .booking h2{font-size:clamp(62px,17.5vw,88px);line-height:.94;letter-spacing:0}
+  .project-card h3{font-size:clamp(66px,20vw,94px);line-height:.9;letter-spacing:0}
+  .statement-photo strong{line-height:1}
+  .format-body h3{line-height:1.04}
+  .benefit-grid h3{line-height:1.05}
+  .identity-photo img{aspect-ratio:4/5;object-position:center 18%}
+  .photo-pair img{height:500px}
+}
