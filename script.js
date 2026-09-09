@@ -1,3 +1,21 @@
+const refine = document.createElement('link');
+refine.rel = 'stylesheet';
+refine.href = 'refine.css?v=2';
+document.head.appendChild(refine);
+
+// Corrige a curadoria das imagens usando apenas arquivos locais do próprio site.
+const heroPhoto = document.querySelector('.hero-photo');
+if (heroPhoto) {
+  heroPhoto.src = 'assets/viny-hero.jpg';
+  heroPhoto.alt = 'Viny em performance ao vivo';
+}
+
+const identityPhoto = document.querySelector('.identity-photo img');
+if (identityPhoto) {
+  identityPhoto.src = 'assets/viny-portrait.jpg';
+  identityPhoto.alt = 'Retrato do DJ Viny';
+}
+
 const form = document.getElementById('bookingForm');
 const eventSelect = document.getElementById('type');
 const whatsappNumber = '5583998008841';
